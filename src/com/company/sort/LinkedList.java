@@ -69,6 +69,16 @@ public class LinkedList {
         linkedList.print();
         linkedList.remove(12);
         linkedList.print();
+        linkedList.remove(12);
+        linkedList.remove(11);
+        linkedList.print();
+        linkedList.remove(13);
+        linkedList.print();
+        linkedList.insert(12);
+        linkedList.insert(10);
+        linkedList.print();
+
+
     }
 
     class Node {
