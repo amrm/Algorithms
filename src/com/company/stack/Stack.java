@@ -8,9 +8,11 @@ package com.company.stack;
 import java.util.Arrays;
 
 public class Stack {
+
     int array[];
     int cur;
     int max=10;
+
     Stack(){
         array=new int[max];
         Arrays.fill(array,-1);
@@ -43,6 +45,38 @@ public class Stack {
         }
         else{
             System.out.println("Peek : "+array[cur-1]);
+        }
+    }
+
+    public int popData(){
+        int data= -1;
+        if(cur == 0) {
+            System.out.println("Stack is empty");
+        }
+        else{
+            data = array[cur-1];
+            array[cur-1] = -1;
+            cur--;
+        }
+        return data;
+    }
+
+    public int peekData(){
+        if(cur == 0) {
+            return -1;
+        }
+        else{
+            return array[cur-1];
+        }
+    }
+
+    public boolean isEmpty(){
+        return cur==0;
+    }
+
+    public void print(){
+        for(int i=0;i <array.length; i++){
+            System.out.println(array[i]);
         }
     }
 
